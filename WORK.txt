@@ -1,0 +1,147 @@
+CONTROL DE USUARIOS
+https://desarrolloweb.com/articulos/1095.php
+
+<? PHP
+//conecto con la base de datos 
+$conn = mysql_connect("servidor","usuario","password"); 
+//selecciono la BBDD 
+mysql_select_db("nombre_bbdd",$conn); 
+
+//Sentencia SQL para buscar un usuario con esos datos 
+$ssql = "SELECT * FROM usuario WHERE nombre_usuario='$usuario' and clave_usuario='$contrasena'"; 
+
+//Ejecuto la sentencia 
+$rs = mysql_query($ssql,$conn); 
+
+//vemos si el usuario y contraseña es váildo 
+//si la ejecución de la sentencia SQL nos da algún resultado 
+//es que si que existe esa conbinación usuario/contraseña 
+if (mysql_num_rows($rs)!=0){ 
+   	//usuario y contraseña válidos 
+   	//defino una sesion y guardo datos 
+   	session_start(); 
+   	session_register("autentificado"); 
+   	$autentificado = "SI"; 
+   	header ("Location: aplicacion.php");	
+}else { 
+   	//si no existe le mando otra vez a la portada 
+   	header("Location: index.php?errorusuario=si"); 
+} 
+mysql_free_result($rs); 
+mysql_close($conn); 
+?>
+
+
+metodo para convertir una pagina web a pdf
+https://stackoverflow.com/questions/18119481/how-to-convert-a-php-web-page-to-pdf
+
+
+<?php
+require_once('tcpdf_include.php');
+$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $pdf->setLanguageArray($l);
+}
+$pdf->SetFont('helvetica', '', 9);
+$pdf->AddPage();
+$html = '<h1>Example of HTML text flow</h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. <em>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</em> <em>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</em><br /><br /><b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i> -&gt; &nbsp;&nbsp; <b>A</b> + <b>B</b> = <b>C</b> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>B</i> = <i>A</i> &nbsp;&nbsp; -&gt; &nbsp;&nbsp; <i>C</i> - <i>A</i> = <i>B</i><br /><br /><b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u> <b>Bold</b><i>Italic</i><u>Underlined</u>';
+$pdf->writeHTML($html, true, 0, true, 0);
+$pdf->lastPage();
+$pdf->Output('example_021.pdf', 'I');
+?>
+
+
+
+metodo para hacer un contador en php
+http://php.net/manual/es/language.operators.increment.php
+<?php
+echo "<h3>Postincremento</h3>";
+$a = 5;
+echo "Debe ser 5: " . $a++ . "<br />\n";
+echo "Debe ser 6: " . $a . "<br />\n";
+
+echo "<h3>Preincremento</h3>";
+$a = 5;
+echo "Debe ser 6: " . ++$a . "<br />\n";
+echo "Debe ser 6: " . $a . "<br />\n";
+
+echo "<h3>Postdecremento</h3>";
+$a = 5;
+echo "Debe ser 5: " . $a-- . "<br />\n";
+echo "Debe ser 4: " . $a . "<br />\n";
+
+echo "<h3>Predecremento</h3>";
+$a = 5;
+echo "Debe ser 4: " . --$a . "<br />\n";
+echo "Debe ser 4: " . $a . "<br />\n";
+?>
+
+metodo para ocultar un textfield de html
+http://www.forosdelweb.com/f13/ocultar-hacer-visible-campo-366613/
+
+<h5>AFORO LIMITADO: <input name="aforo" type="checkbox" onClick="mostrarOcultar(this)">
+N&#186; DE PLAZAS:  <input style="visibility:hidden;" name="nplazas" type="text" size="8" maxlength="5"><br>  
+function mostrarOcultar(obj) {
+  nplazas.style.visibility = (obj.checked) ? 'visible' : 'hidden';
+} 
+
+
+
+
+
+
+metodo para sacar informacion de un query en forma de una tabla 
+https://www.w3schools.com/PhP/showphpfile.asp?filename=demo_db_select_oo_table
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>ID</th><th>Name</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?> 
+
+</body>
+</html>
+
+
+bootstrapp
+https://v4-alpha.getbootstrap.com/getting-started/download/
+canvas
+

@@ -1,0 +1,31 @@
+<?php
+$ticket = $_POST['id_Ticket'];
+$result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'");
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Ejemplo de HTML5" />
+        <meta name="keywords" content="HTML5,CSS3,JavaScript" />
+        <title>MRB_Foxconn_MRB</title>
+    </head>
+    <body bgcolor = "gray">
+      
+		<div>
+             <form action="ticket.html" method="POST">
+			 <fieldset>
+                 <legend>Ticket</legend>
+                     <label for="txtid_Ticket">Ticket</label><br/>
+                     <input type="text" size="40" maxlength="255" id="$txtid_Ticket" name="id_Ticket" value="" />
+                     <br/>
+                     <br/>
+			<input type="submit" name="Buscar" value="Buscar" />
+				</fieldset>
+         </div> 
+    </body>
+</html>
