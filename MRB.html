@@ -1,6 +1,8 @@
 <?php
+include 'con_bd.php';
+$link = connection();
 $ticket = $_POST['id_Ticket'];
-$result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'");
+$result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'"); 
 
 
 
@@ -10,22 +12,61 @@ $result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'");
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="description" content="Ejemplo de HTML5" />
-        <meta name="keywords" content="HTML5,CSS3,JavaScript" />
+        <link rel="stylesheet" href="css/bootstrap.css">
         <title>MRB_Foxconn_MRB</title>
     </head>
-    <body bgcolor = "gray">
+    <body>
       
-		<div>
-             <form action="ticket.html" method="POST">
+	<div class="Mrb">
+             <form action="MRB.php" method="POST">
 			 <fieldset>
-                 <legend>Ticket</legend>
-                     <label for="txtid_Ticket">Ticket</label><br/>
-                     <input type="text" size="40" maxlength="255" id="$txtid_Ticket" name="id_Ticket" value="" />
-                     <br/>
-                     <br/>
-			<input type="submit" name="Buscar" value="Buscar" />
+                     <h4 style="color: black;text-align: left;">Notificacion</h4>
+                     <input type="text" size="60" maxlength="255" id="$txtid_Ticket" name="id_Ticket" value="" /><br><input type="submit" name="Buscar" value="Buscar" />
 				</fieldset>
          </div> 
+	</form>
+	</fieldset>
+	<div class="search">
+	<fieldset>
+	<h4 style="color: black;text-align: left;">Notificacion</h4>
+	<table border="2px"> <!-- Lo cambiaremos por CSS -->
+            <tr>
+                <th>id</th>
+                <th>pn</th>
+                <th>sn</th>
+                <th>cantidad</th>
+                <th>descripcion</th>
+                <th>edit</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>             
+                <td></td>
+		<td></td>
+		<td></td>
+		<td><input type="submit" name="Buscar" value="Editar" /></td>
+            </tr>
+            <tr>
+		<td></td>
+		<td></td>
+                <td></td>
+                <td></td>             
+                <td></td>
+		<td><input type="submit" name="Buscar" value="Editar" /></td>
+            </tr>
+
+	    <tr>
+		<td></td>
+		<td></td>
+                <td></td>
+                <td></td>             
+                <td></td>
+		<td><input type="submit" name="Buscar" value="Editar" /></td>
+            </tr>
+        </table>
+	</fieldset>
+	<div class="derechos">
+		<h5 style="color: black; text-align: center;">© 2017, mrb.foxconn.com, Ing.Alejandro Alaniz J Todos los derechos reservados.</h5>
+	</div>
     </body>
 </html>

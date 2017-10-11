@@ -1,15 +1,15 @@
-<?php
+﻿<?php
 
 	include 'con_bd.php';
-
+	$link = connection();
 	$username=$_POST['user'];
 	$pass=$_POST['password'];
 	#$regis=$_POST['Registro'];
 	
-	print $username;
-	echo "$username,$pass";
+	#print $username;
+	#echo "$username,$pass";
 	
-	/*$sql=mysqli_query("SELECT * FROM usuarios WHERE nombre='$username'" );
+	$sql=mysqli_query("SELECT * FROM usuarios WHERE nombre='$username'" );
 	if($f=mysqli_fetch_array($sql)){
 		if($pass==$f['contra']){ 
 			header("Location: formulario01.php");
@@ -31,5 +31,5 @@
 	#if ($regis) { 
 	#	header('Location: registro.html');
 		
-	#	}*/
+	#	}
 ?>
