@@ -1,0 +1,240 @@
+
+para el boton de editar
+<a href="http://gdlsdash01/ticket/tickets/edit/13625/" class="btn btn-default">Editar / Edit</a>
+
+<a href="#" class="btn btn-info" id="show-filter-button">Show Filter</a>
+// Pagina para buscar una notificacion 
+<div clas="buscar">
+<form method="get" action="/ticket/?like_search=&amp;active=&amp;state_id=&amp;priority_id=&amp;department_id=&amp;min_date_added=&amp;max_date_added=&amp;order_by=&amp;order=&amp;limit=50&amp;filter=" role="form">
+						
+														
+					<div class="form-group">		
+						<input type="text" class="form-control" placeholder="Buscar / Search" name="like_search" value="" size="10">
+					</div>
+					<div class="clearfix"></div>
+					
+					<label class="left-result">Tipo / Type</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen1" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select name="active" tabindex="-1" title="" style="display: none;">
+							<option value="">&nbsp;</option>
+							<option value="1">Abierto / Open</option>
+							<option value="0">Cerrado / Closed</option>							
+						</select>
+					</p>
+					<div class="clearfix"></div>
+						
+				
+					<label class="left-result">Status</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen3" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><select name="state_id" tabindex="-1" title="" style="display: none;">
+							<option value="">&nbsp;</option>
+														<option value="1">Abierto </option>
+														<option value="5">Cancelado</option>
+														<option value="6">Cerrado</option>
+														<option value="3">En Proceso</option>
+														<option value="2">Material Entregado</option>
+														<option value="4">Material Listo</option>
+													</select>
+					</p>
+					<div class="clearfix"></div>
+					
+					<label class="left-result">Prioridad / Priority</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen5" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-6">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen6" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-6" id="s2id_autogen6"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen6_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-6" id="s2id_autogen6_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-6">   </ul></div></div><select name="priority_id" tabindex="-1" title="" style="display: none;">
+							<option value="">&nbsp;</option>
+														<option value="1">Bajo / Low</option>
+														<option value="2">Medio / Medium</option>
+														<option value="3">Alto / High</option>
+														<option value="4">Paro de Linea / STOP</option>
+													</select>
+					</p>
+					<div class="clearfix"></div>
+					
+					<label class="left-result">Proyecto / Project</label>
+					<p class="right-result">
+													<div class="select2-container" id="s2id_update_department_id" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-7">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen7" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-7" id="s2id_autogen7"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen7_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-7" id="s2id_autogen7_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-7">   </ul></div></div><select name="department_id" id="update_department_id" tabindex="-1" title="" style="display: none;">
+								<option value="">&nbsp;</option>
+																																												<option value="12">FA Material</option>
+																																																																																																																									<option value="18">MRB Notifications</option>
+																																																																																																													</select>						
+											</p>
+					<div class="clearfix"></div>
+					
+										
+										
+					<label class="left-result">Min Date</label>					
+					<p class="right-result">
+						<input type="text" data-date-format="YYYY-MM-DD 00:00:00" id="datetimepicker1" class="form-control" placeholder="Min Added Date" name="min_date_added" value="" size="19">	
+					</p>
+					<div class="clearfix"></div>
+
+					<label class="left-result">Max Date</label>					
+					<p class="right-result">
+						<input type="text" data-date-format="YYYY-MM-DD 23:59:59" id="datetimepicker2" class="form-control" placeholder="Max Added Date" name="max_date_added" value="" size="19">
+					</p>
+					<div class="clearfix"></div>					
+					
+					<label class="left-result">Filtrar Por / Sort By</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen8" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-9">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen9" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-9" id="s2id_autogen9"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen9_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-9" id="s2id_autogen9_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-9">   </ul></div></div><select name="order_by" tabindex="-1" title="" style="display: none;">
+							<option value="">&nbsp;</option>
+							<option value="date_added">Agregado / Added</option>
+							<option value="state_id">Status</option>
+							<option value="priority_id">Prioridad / Priority</option>
+							<option value="user_id">Usuario / User</option>
+							<option value="assigned_user_id">Asignado / Assigned</option>
+							<option value="last_modified">Actualizado / Updated</option>								
+							<option value="id">ID</option>								
+							<option value="date_due">Date Due</option>								
+						</select>
+					</p>
+					<div class="clearfix"></div>
+
+					
+					<label class="left-result">Filtar Orden / Sort Order</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen10" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-11">&nbsp;</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen11" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-11" id="s2id_autogen11"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen11_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-11" id="s2id_autogen11_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-11">   </ul></div></div><select name="order" tabindex="-1" title="" style="display: none;">
+								<option value="">&nbsp;</option>
+								<option value="asc">Ascendente / Ascending</option>
+								<option value="desc">Descendente / Descending</option>							
+						</select>
+					</p>
+					<div class="clearfix"></div>
+
+					
+					<label class="left-result">Limite de Pagina / Page Limit</label>
+					<p class="right-result">
+						<div class="select2-container" id="s2id_autogen12" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-13">50</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen13" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-13" id="s2id_autogen13"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen13_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-13" id="s2id_autogen13_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-13">   </ul></div></div><select name="limit" tabindex="-1" title="" style="display: none;">
+								<option value="10">10</option>
+								<option value="25">25</option>
+								<option value="50" selected="selected">50</option>
+								<option value="100">100</option>
+								<option value="250">250</option>		
+						</select>
+					</p>
+					<div class="clearfix"></div>
+					
+					<label class="left-result">Pagina / Page</label>
+					<p class="right-result">
+						1					</p>
+					<div class="clearfix"></div>
+				
+										<br>
+										
+					<div class="pull-right">
+						<button type="submit" name="filter" class="btn btn-info">Filtro / Filter</button>
+						<a href="http://gdlsdash01/ticket/tickets/?limit=" class="btn btn-default">Limpiar / Clear</a>
+					</div>
+					<div class="clearfix"></div>
+					
+				</form>
+			</div>
+			
+//Pagina para hacer un ticket 
+<div class="row">
+	<form method="post" enctype="multipart/form-data" action="/ticket/tickets/add/">
+	
+		<div class="col-md-3">
+			<div class="well well-sm">
+				<div class="pull-right">
+					<p><button type="submit" name="add" class="btn btn-primary">Add Ticket</button></p>
+				</div>
+				<div class="pull-left">
+					<h4>Nuevo Ticket / New Ticket</h4>
+				</div>
+
+				<div class="clearfix"></div>
+							</div>
+		</div>
+
+		<div class="col-md-9">
+						
+
+			<div class="col-md-6">
+			
+				<div class="well well-sm">		
+				
+					<div class="form-group">		
+						<div class="col-lg-12">	
+				
+							<p>Asunto / Subject<br><input required="" type="text" name="subject" class="form-control" value="" size="50"></p>		
+							
+															<p>Proyecto / Project<br>
+																	<div class="select2-container" id="s2id_update_department_id" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">FA Material</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><select name="department_id" id="update_department_id" tabindex="-1" title="" style="display: none;">
+																																																						<option value="12">FA Material</option>
+																																																																																																																																																					<option value="18">MRB Notifications</option>
+																																																																																																																																							</select>						
+																</p>
+														
+							
+							<p>Prioridad / Priority<br>
+							<div class="select2-container" id="s2id_autogen2" style="width: 170px;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3">Bajo / Low</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><select name="priority_id" tabindex="-1" title="" style="display: none;">
+																<option value="1">Bajo / Low</option>
+																<option value="2">Medio / Medium</option>
+																<option value="3">Alto / High</option>
+																<option value="4">Paro de Linea / STOP</option>
+															</select></p>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+			<div class="extra_settings" style="display: none;">
+
+				<div class="col-md-5">
+				
+					<div class="well well-sm">	
+					
+						<div class="form-group">		
+							<div class="col-lg-12">	
+							
+															</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+
+				
+			<div class="clearfix"></div>
+
+			<div class="col-md-12">
+			
+				<div class="well well-sm">	
+					<div class="form-group">		
+						<div class="col-lg-12">	
+				
+							<p>Descripcion / Description<br>
+								<div class="redactor-box"><ul class="redactor-toolbar" id="redactor-toolbar-0"><li><a href="#" class="re-icon re-html" rel="html" tabindex="-1"></a></li><li><a href="#" class="re-icon re-formatting" rel="formatting" tabindex="-1"></a></li><li><a href="#" class="re-icon re-bold" rel="bold" tabindex="-1"></a></li><li><a href="#" class="re-icon re-italic" rel="italic" tabindex="-1"></a></li><li><a href="#" class="re-icon re-deleted" rel="deleted" tabindex="-1"></a></li><li><a href="#" class="re-icon re-unorderedlist" rel="unorderedlist" tabindex="-1"></a></li><li><a href="#" class="re-icon re-orderedlist" rel="orderedlist" tabindex="-1"></a></li><li><a href="#" class="re-icon re-outdent" rel="outdent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-indent" rel="indent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-link" rel="link" tabindex="-1"></a></li><li><a href="#" class="re-icon re-horizontalrule" rel="horizontalrule" tabindex="-1"></a></li><li><a href="#" class="re-icon re-fontsize redactor-btn-image" rel="fontsize" tabindex="-1"></a></li><li><a href="#" class="re-icon re-fontfamily redactor-btn-image" rel="fontfamily" tabindex="-1"></a></li><li><a href="#" class="re-icon re-fontcolor redactor-btn-image" rel="fontcolor" tabindex="-1"></a></li><li><a href="#" class="re-icon re-backcolor redactor-btn-image" rel="backcolor" tabindex="-1"></a></li></ul><div class="redactor-editor" contenteditable="true" dir="ltr" style="min-height: 100px;"><p>​</p></div><textarea class="wysiwyg_enabled" name="description" cols="80" rows="12" dir="ltr" style="display: none;"></textarea></div>
+							</p>
+							
+														
+														
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="col-md-12">
+
+				<div class="pull-right">
+					<p><button type="submit" name="add" class="btn btn-primary">Add Ticket</button></p>
+				</div>
+			</div>
+				
+		</div>
+	</form>
+</div>
+
+
+
+
+//Query para buscar una etiqueta 
+
+Select * From ticket where id_ticket = $id_ticket;
+//buscar metodo que se haga automaticamente una pagina web 
+//

@@ -12,21 +12,25 @@ $result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'");
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/grayscale.css">
+	<link rel="stylesheet" href="css/grayscale.min.css">
         <title>MRB_Foxconn_MRB</title>
     </head>
     <body>
-      
+      <div class="imagen"><center>
+	<IMG SRC="imagenes/foxconn.png">
+	</div>
 	<div class="Mrb">
-             <form action="MRB.php" method="POST">
+             <form action="mrb.php" method="POST">
 			 <fieldset>
-                     <h4 style="color: black;text-align: left;">Notificacion</h4>
+                     <h4 style="color: white;text-align: left;">Notificacion</h4>
                      <input type="text" size="60" maxlength="255" id="$txtid_Ticket" name="id_Ticket" value="" /><br><input type="submit" name="Buscar" value="Buscar" />
 				</fieldset>
          </div> 
 	</form>
 	</fieldset>
 	<div class="search">
+		<form action="mrb01.php" method="POST">
 	<fieldset>
 	<h4 style="color: black;text-align: left;">Notificacion</h4>
 	<table border="2px"> <!-- Lo cambiaremos por CSS -->
@@ -65,8 +69,10 @@ $result = mysql_query("SELECT * from ticket where id_Ticket='" . $ticket . "'");
             </tr>
         </table>
 	</fieldset>
+	</form>
+	</div>
 	<div class="derechos">
-		<h5 style="color: black; text-align: center;">© 2017, mrb.foxconn.com, Ing.Alejandro Alaniz J Todos los derechos reservados.</h5>
+		<h5 style="color: white; text-align: left;">© 2017, mrb.foxconn.com, Ing.Alejandro Alaniz J Todos los derechos reservados.</h5>
 	</div>
     </body>
 </html>
