@@ -1,40 +1,45 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/grayscale.css">
+     <link rel="stylesheet" href="css/grayscale.css">
 	<link rel="stylesheet" href="css/grayscale.min.css">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
         <title>MRB_Foxconn_Notificacion</title>
 		<style>
 		
 		</style>
     </head>
     <body>
+	<header class="encabezado">
 	<div class="Ingresar">
 		<div class="clasee1">
 		<IMG SRC="imagenes/foxconn.png">
-		<h2 style="color: white; text-align:left;">Notificacion</h2> 
+		<h2 style="color: black; text-align:left;">Notificacion</h2> 
 			</div>
 		</div>
+	</header>
 	<div class="Notificacion">
 		 <form action="formulario.php" method="POST">
-		<h4 style="color: white; text-align: left;">Part Number</h4> 
+		<h4 style="color: black; text-align: left;">Part Number</h4> 
         <input aling="left" type="text" size="40" maxlength="255" id="$txtpn" name="pn" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Serial Number</h4> 
+		<h4 style="color: black; text-align: left;">Serial Number</h4> 
         <input type="text" size="40" maxlength="255" id="$txtsn" name="sn" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Cantidad</h4> 
+		<h4 style="color: black; text-align: left;">Cantidad</h4> 
         <input type="text" size="40" maxlength="255" id="$txtqty" name="qty" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Origen</h4> 
+		<h4 style="color: black; text-align: left;">Origen</h4> 
         <input type="text" size="40" maxlength="255" id="$txtorigin" name="origin" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Vendor</h4> 
+		<h4 style="color: black; text-align: left;">Vendor</h4> 
         <input type="text" size="40" maxlength="255" id="$txtvendor" name="vendor" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Prioridad</h4>
+		<h4 style="color: black; text-align: left;">Prioridad</h4>
 		<select id="Prioridad" name="Prioridad">
         <option value="-1" selected="selected"> selecciona una opcion</option>
 		<option value="-1" selected="selected">medio</option>
 		</select><br>
-	<h4 style="color: white; text-align: left;">MBD</h4> 
+	<h4 style="color: black; text-align: left;">MBD</h4> 
         <input type="text" size="40" maxlength="255" id="$txtmbd" name="mbd" value="" /><br/>	
-		<h4 style="color: white; text-align: left;">Descripcion de Material</h4>
+		<h4 style="color: black; text-align: left;">Descripcion de Material</h4>
 		<select id="Descripcion_Material" name="Descripcion_Material">
         	<option value="-1" selected="selected">selecciona una opcion</option>
 		<option value="-2" selected="selected">bag</option>
@@ -82,7 +87,7 @@
 		<option value="-43" selected="selected">switch</option>
 		<option value="-44" selected="selected">tool screw</option>
         </select><br/>
-		<h4 style="color: white; text-align: left;">Disposittion</h4> 
+		<h4 style="color: black; text-align: left;">Disposittion</h4> 
         <select id="Linea" name="Disposittion">
         <option value="-1" selected="selected"> selecciona una opcion</option>
 		<option value="-2" selected="selected">FA2</option>
@@ -90,11 +95,11 @@
 		<option value="-4" selected="selected">Scrap</option></br>
 		</select>
 		</br>
-		<h4 style="color: white; text-align: left;">Codigo de Falla</h4> 
+		<h4 style="color: black; text-align: left;">Codigo de Falla</h4> 
         <input type="text" size="40" maxlength="255" id="$txtCode_Fail" name="Code_Fail" value="" /><br/>
-		<h4 style="color: white; text-align: left;">Descripcion de Falla</h4> 
+		<h4 style="color: black; text-align: left;">Descripcion de Falla</h4> 
         <textarea rows="4" cols="50"name="desc_fail"></textarea>
-		<h4 style="color: white; text-align: left;">Linea</h4>
+		<h4 style="color: black; text-align: left;">Linea</h4>
 		<select id="Linea" name="Linea">
         <option value="-1" selected="selected"> selecciona una opcion</option>
 		<option value="-2" selected="selected">Butser</option>
@@ -114,9 +119,11 @@
 		<input type="button" value="Imprimir" onclick="javascript:imprSelec('Notificacion');function imprSelec(Notificacion)
 {var ficha=document.getElementById(Notificacion);var ventimp=window.open(' ','popimpr');ventimp.document.write(ficha.innerHTML);ventimp.document.close();ventimp.print();ventimp.close();};" />
 	</div>
-		<br/>
+	
+	<footer>
 	<div class="derechos">
-		<h5 style="color: white; text-align: left;">© 2017, mrb.foxconn.com, Ing.Alejandro Alaniz J Todos los derechos reservados.</h5>
+		<h5 style="color: black; text-align: left;">� 2017, mrb.foxconn.com, Ing.Alejandro Alaniz J Todos los derechos reservados.</h5>
 	</div>
+	</footer>
     </body>
 </html>

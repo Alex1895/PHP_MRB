@@ -20,3 +20,5 @@
 	echo '<script language="JavaScript">alert("Se Registro con exito");</script>';
 	mysqli_close($link);
 ?>
+
+
