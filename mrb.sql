@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
@@ -59,6 +59,7 @@ INSERT INTO `usuarios` (`id_Usuarios`, `Nombre`, `Contraseña`, `Tipo_Usuarios`)
 (1, 'user', 'user', 'Usuario'),
 (2, 'root', 'root', 'Administrador'),
 (3, 'mrb', 'mrb', 'Mrb');
+(4, 'ncm', 'ncm', 'ncm');
 
 --
 -- Índices para tablas volcadas
